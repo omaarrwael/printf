@@ -6,7 +6,7 @@
  */
 int char_func(va_list arg_list)
 {
-	write_fun(va_arg(arg_list, int));
+	write_func(va_arg(arg_list, int));
 	return (1);
 }
 /**
@@ -19,14 +19,27 @@ int string_func(va_list arg_list)
 	int n;
 	char *c;
 
-	c = va_arg(arg_list, char *)
+	c = va_arg(arg_list, char *);
 	if (c == NULL)
 	{
 		c = "(null)";
 	}
 	for (n = 0; c[n] != '\0'; n++)
 	{
-		write_fun(c[n]);
+		write_func(c[n]);
 	}
 	return (n);
+}
+
+/**
+ * percent_func - a function that prints a percent
+ *
+ * @list_of_args: the list of args passed
+ * Return: returns the number of chars printed
+ */
+
+int percent_func(__attribute__((unused))va_list list_of_args)
+{
+	write_func('%');
+	return (1);
 }

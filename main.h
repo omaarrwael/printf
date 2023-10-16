@@ -31,7 +31,7 @@ int _printf(const char *format, ...);
 int convert_func(const char *format, instance_t list_of_funcs[],
 		va_list list_of_args);
 
-int write_fun(char c);
+int write_func(char c);
 int char_func(va_list arg_list);
 int string_func(va_list arg_list);
 int percent_func(va_list arg_list);
