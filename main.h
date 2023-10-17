@@ -35,5 +35,7 @@ int write_func(char c);
 int char_func(va_list arg_list);
 int string_func(va_list arg_list);
 int percent_func(va_list arg_list);
+int int_func(va_list arg_list);
+int num_func(va_list arg_list);
 
 #endif

@@ -43,3 +43,17 @@ int percent_func(__attribute__((unused))va_list list_of_args)
 	write_func('%');
 	return (1);
 }
+
+/**
+ * int_func - a function that prints an integer
+ * @list_of_args: list of variable number of args
+ * Return: returns the number of elemnts printed
+ */
+
+int int_func(va_list list_of_args)
+{
+	int num_of_elem;
+
+	num_of_elem = num_func(list_of_args);
+	return (num_of_elem);
+}
